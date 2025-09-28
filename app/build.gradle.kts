@@ -63,8 +63,13 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     // Dagger core
     implementation("com.google.dagger:dagger:2.48")
+    kapt("com.google.dagger:dagger-compiler:2.48") // Dagger compiler (annotation processor)
 
-    // Dagger compiler (annotation processor)
-    kapt("com.google.dagger:dagger-compiler:2.48")
+
+    // Koin core features
+    implementation("io.insert-koin:koin-core:3.2.0")
+// Koin Android features
+    implementation("io.insert-koin:koin-android:3.2.0")
+    //implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
 
 }

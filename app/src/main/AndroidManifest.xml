@@ -10,12 +10,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".koin.KoinApplication"
         android:theme="@style/Theme.DemoKotlin">
-        <!--<activity
-            android:name=".dagger.DaggerActivity"
+       <!-- <activity
+            android:name=".koin.KoinActivity"
             android:exported="false" />-->
+        <!--
         <activity
             android:name=".dagger.DaggerActivity"
+            android:exported="false" />
+        -->
+        <activity
+            android:name=".koin.KoinActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.DemoKotlin">
