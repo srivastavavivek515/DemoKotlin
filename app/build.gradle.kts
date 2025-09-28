@@ -66,10 +66,6 @@ dependencies {
     kapt("com.google.dagger:dagger-compiler:2.48") // Dagger compiler (annotation processor)
 
 
-    // Koin core features
-    implementation("io.insert-koin:koin-core:3.2.0")
-// Koin Android features
-    implementation("io.insert-koin:koin-android:3.2.0")
-    //implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
-
+    // Koin core + Android + ViewModel support
+    implementation("io.insert-koin:koin-android:3.5.6")
 }
