@@ -28,5 +28,10 @@ abstract class DaggerModule{
         fun getRoomRepo(@DataAnnotation("roomDB") storeData: StoreData): StorageRepo{
             return StorageRepo(storeData)
         }
+
+        @Provides
+        fun getRunTimeValue(@Named("baseUrl")data:String): RunTimeValues{
+            return RunTimeValues(data)
+        }
     }
 }

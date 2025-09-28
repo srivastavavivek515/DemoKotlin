@@ -47,3 +47,10 @@ class StorageRepo @Inject constructor(val storeData: StoreData){
         storeData.saveData("")
     }
 }
+
+
+class RunTimeValues @Inject constructor(val data:String){
+    fun showData(){
+        println("This is runtime value $data")
+    }
+}

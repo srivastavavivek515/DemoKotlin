@@ -21,17 +21,26 @@ class DaggerActivity : AppCompatActivity() {
     @Inject
     lateinit var roomRepo: StorageRepo
 
+
+    @Inject
+    lateinit var runTimeValues: RunTimeValues
+
     @Inject
     lateinit var saveDataInFirebase: SaveDataInFirebase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_dagger)
-        testComponent =  DaggerTestComponent.create()
+      /*  testComponent =  DaggerTestComponent.create()
         testComponent.inject(this)
-        //car.running()
-       // saveDataInFirebase.saveData("Firebase saved")
+        car.running()
+        saveDataInFirebase.saveData("Firebase saved")
         firebaseRepo.startSync()
-        roomRepo.startSync()
+        roomRepo.startSync()*/
+
+        testComponent = DaggerTestComponent.builder().passData("Hi Vivek").build()
+        testComponent.inject(this)
+        runTimeValues.showData()
+
     }
 }
